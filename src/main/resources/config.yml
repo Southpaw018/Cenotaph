@@ -24,6 +24,11 @@ Core:
     #after they are unlocked, enable this.
     creeperProtection: false
 
+    #If you are not locking your chests with Lockette or LWC but still want them to be
+    #protected against TnT explosions, or you want your chests to be protected even
+    #after they are unlocked, enable this.
+    tntProtection: true
+
     #Each line may be one of any custom text OR:
     #{name} for player name
     #{date} for day of death

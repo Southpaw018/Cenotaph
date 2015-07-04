@@ -1,0 +1,96 @@
+name: Cenotaph
+main: com.MoofIT.Minecraft.Cenotaph.Cenotaph
+version: 4.6
+description: Dead Man's Chest mod for Bukkit. Forked from Tombstone by Drakia (TheDgtl) 
+author: Southpaw018
+authors: [cindyker]
+website: http://www.moofit.com
+softdepend: [LWC, dynmap]
+
+commands:
+  cenlist:
+    description: Show a list of your Cenotaphs
+    usage: /<command> - Show a list of your Cenotaphs
+    aliases: [cenotaphlist]
+  cenfind:
+    description: |
+      Set your compass to point at the designated Cenotaph.
+      Get the index using /cenotaphlist
+    usage: /<command> <index> - Point your compass at the given Cenotaph
+    aliases: [cenotaphfind]
+  cenreset:
+    description: Reset your compass to spawn
+    usage: /<command>
+    aliases: [cenotaphreset]
+  ceninfo:
+    description: Show the time left before your cenotaph unlocks or breaks
+    usage: /<command> <index>
+    aliases: [cenotaphinfo,centime,cenotaphtime]
+
+  cenadmin:
+    description: Admin commands for Cenotaph
+    usage: /<command> for more usage instructions
+    aliases: [cenotaphadmin]
+
+permissions:
+  cenotaph.use:
+    description: Allow the player/group to use the cenotaph mod
+    default: true
+  cenotaph.large:
+    description: Allow the player to spawn a large chest if carrying two chests and if one will fit
+    default: false
+  cenotaph.sign:
+    description: Whether the player gets a sign on their cenotaph chest
+    default: true
+  cenotaph.quickloot:
+    description: Whether to allow a player/group to quickloot by right clicking the cenotaph sign.
+    default: true
+
+  cenotaph.freechest:
+    description: Allow the player to get a chest whether they are carrying a chest or not
+    default: false
+  cenotaph.freesign:
+    description: Allow the player to get a free sign whether they are carrying one or not.
+    default: false
+  cenotaph.freelockettesign:
+    description: Give the player an additional free sign if using Lockette.
+    default: false
+
+  cenotaph.lwc:
+    description: Protect the placed chest if LWC is enabled
+    default: true
+  cenotaph.lockette:
+    description: Protect the placed chest if Lockette is enabled
+    default: true
+
+  cenotaph.cmd.cenotaphlist:
+    description: Allow this user to use /cenlist
+    default: true
+  cenotaph.cmd.cenotaphfind:
+    description: Allow this user to use /cenfind
+    default: true
+  cenotaph.cmd.cenotaphtime:
+    description: Allow this user to use /centime
+    default: true
+  cenotaph.cmd.cenotaphreset:
+    description: Allow this user to use /cenreset
+    default: true
+
+  cenotaph.admin:
+    description: Allow this user to physically destroy others' cenotaphs. Also a prerequisite for use of the other admin commands
+    default: op
+  cenotaph.admin.list:
+    description: Allow this user to see all cenotaphs with /cenadmin list
+    default: op
+  cenotaph.admin.find:
+    description: Allow this user to find any cenotaph with /cenadmin find
+    default: op
+  cenotaph.admin.time:
+    description: Allow this user to check the time left on any cenotaph with /cenadmin time
+    default: op
+  cenotaph.admin.remove:
+    description: Allow this user to destroy any cenotaph with /cenadmin remove
+    default: op
+  cenotaph.admin.reload:
+    description: Allow this user to reload Cenotaph's configuration from config.yml
+    default: op
